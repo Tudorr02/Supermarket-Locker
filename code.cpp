@@ -50,7 +50,7 @@ void setup() {
 lcd.init();
 lcd.backlight();
 lcd.setCursor(0, 0);
-lcd.print("Introdu o parola :");
+lcd.print("Enter a password :");
 lcd.setCursor(7,1);
 pinMode(12,INPUT_PULLUP);
 pinMode(11, INPUT_PULLUP);
@@ -128,7 +128,7 @@ void incorect()
   pinMode(1, OUTPUT);
       digitalWrite(1, LOW);
       lcd.setCursor(0,3);
-      lcd.print("Parola incorecta !!");
+      lcd.print("Incorrect password !!");
       delay(1000);
       digitalWrite(1, HIGH);
       incercari_ramase(); 
@@ -143,7 +143,7 @@ void corect()
       lcd.print("--------------------");
       lcd.setCursor(1,3);
       servo.write(0);
-      lcd.print("Parola corecta !!");
+      lcd.print("Correct password!!");
       exit(0);
 }
 
@@ -152,10 +152,10 @@ void incercari_ramase()
   if(incercari>0){
   lcd.clear();
   lcd.setCursor(0,0);
-  lcd.print("Introdu o parola:");
+  lcd.print("Enter a password:");
   lcd.setCursor(0,1);
   const char mesaj[20];
-  sprintf(mesaj,"Incercari ramase %d ",incercari);
+  sprintf(mesaj,"Attempts left %d ",incercari);
   lcd.print(mesaj);
   i=0;
   lcd.setCursor(6,3);
@@ -169,7 +169,7 @@ else
   lcd.setCursor(0,0);
   lcd.print("--------------------");
   lcd.setCursor(0,2);
-  lcd.print("LOCKER BLOCAT");
+  lcd.print("LOCKER BLOCKED");
   lcd.setCursor(0,3);
   lcd.print("--------------------");
   digitalWrite(1, LOW);
@@ -193,7 +193,7 @@ void reset(){
     lcd.setCursor(0,0);
     lcd.print("--------------------");
     lcd.setCursor(0,1);
-    lcd.print("RESETARE PAROLA");
+    lcd.print("PASSWORD RESET");
     servo.write(0);
     lcd.setCursor(0,3);
     lcd.print("--------------------");
@@ -202,12 +202,12 @@ void reset(){
     digitalWrite(1, HIGH);
     lcd.clear();
     lcd.setCursor(0,0);
-    lcd.print("Parola noua");
+    lcd.print("New password");
     //delay(2000);
     lcd.setCursor(0,1);
-    lcd.print("minim 4 caractere");
+    lcd.print("minimum 4 characters");
     lcd.setCursor(0,2);
-    lcd.print("*# pentru setare");
+    lcd.print("*# for set");
     lcd.setCursor(0,3);
     cond=1;
     }
@@ -244,9 +244,9 @@ void reset(){
         lcd.setCursor(0,0);
         lcd.print("Setare incorecta!");
         lcd.setCursor(0,1);
-        lcd.print("Minim 4 caractere!");
+        lcd.print("Minimum 4 characters!");
         lcd.setCursor(0,2);
-        lcd.print("APASA BUTOANELE");
+        lcd.print("PRESS");
         lcd.setCursor(0,3);
         lcd.print("RESET->NEW PASS");
         servo.write(90);
@@ -262,7 +262,7 @@ void reset(){
       lcd.setCursor(0,0);
       lcd.print("--------------------");
       lcd.setCursor(0,1);
-      lcd.print("Parola este resetata:");
+      lcd.print("New password:");
       servo.write(90);
       lcd.setCursor(0,2);
       lcd.print(parola);
@@ -278,7 +278,7 @@ void reset(){
      cond=0;
      digitalWrite(0,LOW);
      //delay(5000);
-     lcd.print("Introdu o parola:");
+     lcd.print("Enter a password:");
      
       lcd.setCursor(7,1);
     
@@ -294,7 +294,7 @@ void deschidere()
     {
       lcd.clear();
       lcd.setCursor(0,0);
-      lcd.print("DESCHIDERE FORTATA");
+      lcd.print("FORCE OPEN");
       servo.write(0);
       digitalWrite(0,LOW);
       digitalWrite(1,LOW);
@@ -303,7 +303,7 @@ void deschidere()
       lcd.setCursor(0,2);
       lcd.print("--------------------");
       lcd.setCursor(0,3);
-      lcd.print("APASA RESET");
+      lcd.print("Press RESET");
       delay(200);
     }
 
