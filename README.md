@@ -14,6 +14,7 @@ This project simulates a supermarket locker.
 - if you want to set a new password press```NEW_PASS```
 - in case you want to open the locker (even if it is locked), without entering the password press ```FORCE OPEN``` (for emergency situations)
 
+## _You can test the simulator here_ : 🧑‍💻 https://wokwi.com/projects/348701445367792212
 ![image](https://user-images.githubusercontent.com/92024989/202810852-dbf2e32a-cd8b-4799-9c91-cca028d7b07e.png)
 ![image](https://user-images.githubusercontent.com/92024989/202811030-bffe99d5-3c7b-4e99-ba4c-41aa57f4e2e1.png)
 ![image](https://user-images.githubusercontent.com/92024989/202810963-9e46668f-8a11-43c6-aefb-a014ad66c6b4.png)
