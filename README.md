@@ -8,7 +8,7 @@ This project simulates a supermarket locker.
 
 :three: Number of attempts before auto-lock : ***3***
 
-##  -_Base rules for administrator_
+##  _Base rules for administrator_
 
 - if the locker gets locked : press ```RESET``` 
 - if you want to set a new password press```NEW_PASS```
