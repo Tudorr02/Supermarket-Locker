@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 402.94, "left": 25, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad", "top": -3.63, "left": 96.72, "attrs": {} },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd2",
+      "top": 421.29,
+      "left": 375.07,
+      "attrs": { "pins": "i2c", "background": "blue", "color": "white" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 350.97,
+      "left": 366.11,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 351.03,
+      "left": 406.14,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 636.66,
+      "left": 95.01,
+      "attrs": { "color": "black", "label": "RESET" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 331.2,
+      "left": 61.42,
+      "attrs": { "color": "green", "label": "NEW_PASS" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 613.47, "left": 411.37, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 330.68,
+      "left": -36.18,
+      "attrs": { "color": "red", "label": "FORCE OPEN" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.1", "lcd:VSS", "black", [ "v-51", "*", "h0", "v18" ] ],
+    [ "uno:GND.1", "lcd:K", "black", [ "v-51", "*", "h0", "v18" ] ],
+    [ "uno:GND.1", "lcd:RW", "black", [ "v-51", "*", "h0", "v18" ] ],
+    [ "uno:2", "keypad:C4", "brown", [] ],
+    [ "uno:3", "keypad:C3", "gray", [] ],
+    [ "uno:4", "keypad:C2", "orange", [] ],
+    [ "uno:5", "keypad:C1", "pink", [] ],
+    [ "uno:6", "keypad:R4", "blue", [] ],
+    [ "uno:7", "keypad:R3", "green", [] ],
+    [ "uno:8", "keypad:R2", "purple", [ "v-14", "h0" ] ],
+    [ "uno:9", "keypad:R1", "gold", [ "v-18", "h0" ] ],
+    [ "uno:5V", "lcd2:VCC", "red", [ "v26.76", "h120.72", "v-175.3" ] ],
+    [ "uno:GND.2", "lcd2:GND", "black", [ "v16.41", "h107.52", "v-173.82" ] ],
+    [ "uno:A5", "lcd2:SCL", "green", [ "v31.38", "h32.25", "v-158.56" ] ],
+    [ "uno:A4", "lcd2:SDA", "green", [ "v31.82", "h41.44", "v-153.97" ] ],
+    [ "led1:C", "uno:1", "red", [ "v1.73", "h-111.11" ] ],
+    [ "led2:C", "uno:0", "blue", [ "v7.07", "h-141.64" ] ],
+    [ "led1:A", "lcd2:VCC", "black", [ "v22.21", "h-21.8", "v43.34" ] ],
+    [ "led2:A", "lcd2:VCC", "black", [ "v22.44", "h-60.63", "v41.2" ] ],
+    [ "uno:12", "btn2:1.r", "green", [ "v0" ] ],
+    [ "uno:GND.1", "btn2:2.l", "black", [ "v-15.34", "h-85.56", "v-29.48", "h2.17" ] ],
+    [ "uno:RESET", "btn1:2.l", "green", [ "v25.87", "h-89.8", "v54.17" ] ],
+    [ "uno:GND.2", "btn1:1.r", "black", [ "v0" ] ],
+    [ "uno:GND.2", "servo1:GND", "black", [ "v0" ] ],
+    [ "uno:5V", "servo1:V+", "red", [ "v26.41", "h75.07", "v56.41" ] ],
+    [ "uno:GND.1", "btn3:2.l", "black", [ "v-15.11", "h-174.55" ] ],
+    [ "uno:11", "btn3:1.r", "green", [ "v-87.58", "h-138.5" ] ],
+    [ "uno:10", "servo1:PWM", "purple", [ "v-99.01", "h-239.36", "v391.21", "h463.78" ] ]
+  ]
+}
