@@ -1,5 +1,5 @@
 # Supermarket-Locker
-
+> _Arduino project_
 ## _Arduino project_
 
 This project simulates a supermarket locker.
